@@ -11,7 +11,9 @@ const request = superTest(server);
 
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGOOSE_TEST_URI, {
+let connectionString = 'mongodb+srv://shady:2891994@cluster0.0rqsi.mongodb.net/testDb?retryWrites=true&w=majority';
+
+mongoose.connect(process.env.MONGOOSE_TEST_URI || connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false ,
