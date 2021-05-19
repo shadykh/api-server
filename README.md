@@ -89,14 +89,15 @@ In your express server, create a route module for each data model that you’ve 
     - ![github tests](https://raw.githubusercontent.com/shadykh/api-server/main/src/assets/githubtests.PNG)
 
 - Heroku
-  - For the link of the ***deployment main branch => /api/favorite/games <= route***  clicks => [here](https://shady-basic-api-server.herokuapp.com/api/favorite/games).
+  - For the link of the ***deployment main branch => /api/favorite/games <= route***  clicks => [here](https://shady-api-server.herokuapp.com/api/favorite/games).
 
 - UML:
   - ![UML](https://raw.githubusercontent.com/shadykh/api-server/main/src/assets/uml.PNG)
+  - ![UML](https://raw.githubusercontent.com/shadykh/api-server/main/src/assets/uml_api.PNG)
 
 - Tests:
   - run `npm test server.test.js`
-  - Test the routes and statues➡️ [server.test.js]
+  - Test the routes and statues➡️ [server.test.js](./__tests__/server.test.js)
 
 - I did this lab with help of
   - dependencies
