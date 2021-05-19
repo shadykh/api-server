@@ -5,17 +5,10 @@ require('dotenv').config();
 
 const { server } = require('../src/server.js');
 
-const superTest = require('supertest');
+const supergoose = require('@code-fellows/supergoose');
 
-const request = superTest(server);
+const request = supergoose(server);
 
-const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGOOSE_TEST_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false ,
-});
 
 describe('server💻 anime👻', () => {
 
@@ -49,7 +42,6 @@ describe('server💻 anime👻', () => {
     expect(response.body.length).toBeGreaterThan(0);
   });
 
-
   it('should update ✔️ an anime👻 using PUT', async () => {
 
     let updateAnime = {
@@ -81,9 +73,6 @@ describe('server💻 anime👻', () => {
 
 describe('server 💻 games⚔️', () => {
 
-  afterAll(() => {
-    mongoose.connection.close();
-  });
 
   let id;
 
@@ -112,7 +101,6 @@ describe('server 💻 games⚔️', () => {
     expect(response.status).toEqual(200);
     expect(response.body.length).toBeGreaterThan(0);
   });
-
 
   it('should update ✔️ an game⚔️ using PUT', async () => {
 
