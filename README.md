@@ -89,7 +89,38 @@ In your express server, create a route module for each data model that you’ve 
     - ![github tests](https://raw.githubusercontent.com/shadykh/api-server/main/src/assets/githubtests.PNG)
 
 - Heroku
-  - For the link of the ***deployment main branch => /api/favorite/games <= route***  clicks => [here](https://shady-api-server.herokuapp.com/api/favorite/games).
+  - For the link of the ***deployment main branch => `/api/favorite/games` <= route***  clicks => [here](https://shady-api-server.herokuapp.com/api/favorite/games).
+
+- Endpoint:
+
+    - `/api/favorite/games` Return JSON objects
+
+    - ```
+        [
+          {
+            "portal": "PC",
+            "_id": "60a656390048950015e961f2",
+            "name": "Command & Conquer: Red Alert 2",
+            "genre": "Strategy ",
+            "__v": 0
+          }
+        ]
+      ```
+
+
+  - `/api/favorite/anime` Return JSON objects
+
+    - ```
+        [
+          {
+              "hairColor": "White",
+              "_id": "60a6578e0048950015e961fb",
+              "name": "Hunter x Hunter",
+              "character": "Gon",
+              "__v": 0
+          }
+        ]
+      ```
 
 - UML:
   - ![UML](https://raw.githubusercontent.com/shadykh/api-server/main/src/assets/uml.PNG)
@@ -98,6 +129,10 @@ In your express server, create a route module for each data model that you’ve 
 - Tests:
   - run `npm test server.test.js`
   - Test the routes and statues➡️ [server.test.js](./__tests__/server.test.js)
+
+- App:
+  - run `npm start` or `nodmon`
+  - visit Herokue depolyed app [here](https://shady-api-server.herokuapp.com/api/favorite/games)
 
 - I did this lab with help of
   - dependencies
