@@ -16,6 +16,8 @@ const animeRoutes = require('./routes/anime');
 
 const gamesRoutes = require('./routes/games');
 
+const todoRoutes = require('./routes/todo');
+
 app.use(express.json());
 
 app.use(morgan('dev'));
@@ -25,6 +27,8 @@ app.use(cors());
 app.use('/api/favorite/anime', animeRoutes);
 
 app.use('/api/favorite/games', gamesRoutes);
+
+app.use('/api/favorite/todo', todoRoutes);
 
 app.use('*', error404Handler);
 
